@@ -17,7 +17,7 @@ function HostApps() {
 
     const hostApps = async () => {
         try {
-            const response = await axios.get("/api/admin/getAllApps", {
+            const response = await axios.get("https://rentupapi.herokuapp.com/api/admin/getAllApps", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -39,7 +39,7 @@ function HostApps() {
 
     const changeHostStatus=async(formId)=>{
        console.log(userId);
-        const response= await axios.post("/api/admin/changeHostStatus",{formId:formId},{
+        const response= await axios.post("https://rentupapi.herokuapp.com/api/admin/changeHostStatus",{formId:formId},{
             headers:{
                 Authorization:   `Bearer ${token}`
                 
@@ -54,7 +54,7 @@ function HostApps() {
   
     const makeHost = async(userId)=>{
         console.log(userId,)
-        const response= await axios.post("/api/admin/makeHost",{userId:userId},
+        const response= await axios.post("https://rentupapi.herokuapp.com/api/admin/makeHost",{userId:userId},
         {
             headers:{
                 Authorization:  `Bearer ${token}`

@@ -13,7 +13,7 @@ function Userslist() {
    const getUserData=async()=>{
 
     try{
-        const response= await axios.get("/api/admin/getAllUsers",{
+        const response= await axios.get("https://rentupapi.herokuapp.com/api/admin/getAllUsers",{
             headers:{
                 Authorization: `Bearer ${token}`
             }

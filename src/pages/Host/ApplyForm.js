@@ -76,7 +76,7 @@ function ApplyForm() {
         const formdata = {firstname, lastname,email, phone,place,district,state,idproof,userImage,IdImage}
         console.log(formdata,"fffffff")
         try{
-            const response= await axios.post("/api/application/newApplicationform",{
+            const response= await axios.post("https://rentupapi.herokuapp.com/api/application/newApplicationform",{
                 formdata
             },{
                 headers:{

@@ -17,7 +17,7 @@ function HostCars() {
     const getmyCars = async () => {
 
         try {
-            const response = await axios.get("/api/host/myCars", {
+            const response = await axios.get("https://rentupapi.herokuapp.com/api/host/myCars", {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

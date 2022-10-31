@@ -40,7 +40,7 @@ function AddCar() {
   
  
   console.log(formdata,"ffffffff")
-  const response= await axios.post("/api/host/addNewCar",formdata,{
+  const response= await axios.post("https://rentupapi.herokuapp.com/api/host/addNewCar",formdata,{
     headers:{
       Authorization: `Bearer ${token}`
     }

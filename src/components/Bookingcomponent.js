@@ -77,7 +77,7 @@ function Bookingcomponent() {
 
     const fetchCar = async () => {
 
-        const response = await axios.get(`/api/users/getSingleCar/${carid}`)
+        const response = await axios.get(`https://rentupapi.herokuapp.com/api/users/getSingleCar/${carid}`)
         console.log(response.data.singleCar[0], "dataaaa")
         setCarDetails(response.data.singleCar[0])
 
@@ -99,7 +99,7 @@ function Bookingcomponent() {
             handler: async (response) => {
                 try {
 
-                    const verifyUrl = "/api/users/verify"
+                    const verifyUrl = "https://rentupapi.herokuapp.com/api/users/verify"
                     const { data } = await axios.post(verifyUrl, response)
                     console.log(data, "verifieeeeedd")
                     if (data) {
@@ -126,7 +126,7 @@ function Bookingcomponent() {
     const paymentHandler = async (e) => {
         try {
 
-            const orderUrl = '/api/users/orders'
+            const orderUrl = 'https://rentupapi.herokuapp.com/api/users/orders'
             e.preventDefault();
             const bookingData = {
                 amount: totalPayableAmount,

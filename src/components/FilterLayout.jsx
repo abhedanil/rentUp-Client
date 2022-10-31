@@ -118,7 +118,7 @@ function FilterLayout() {
 
         try {
 
-            const response = await axios.get('/api/users/getAllCars')
+            const response = await axios.get('https://rentupapi.herokuapp.com/api/users/getAllCars')
             if (response) {
                 console.log(response.data.cars, "resssssssssssss555555")
                 setSearchResult(response.data.cars)
