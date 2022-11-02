@@ -73,7 +73,7 @@ function ApplyForm() {
   
     const onSubmit=async(e)=>{
         e.preventDefault()
-        const formdata = {firstname, lastname,email, phone,place,district,state,idproof,userImage,IdImage}
+        const formdata = {firstname, lastname,email, phone,place,district,state,idproof}
         console.log(formdata,"fffffff")
         try{
             const response= await axios.post("https://rentupapi.herokuapp.com/api/application/newApplicationform",{
@@ -134,16 +134,7 @@ function ApplyForm() {
                             id="idproof" name="idproof"
                             value={idproof} fullWidth sx={{ margin: "5px 0" }} onChange={onChange} />
 
-                        <Typography  align="center" sx={{ margin: "5px 0" }}>Upload Identification</Typography>
-                            <FormControl sx={{ margin: "5px 0" }}>
-                            <InputLabel htmlFor="outlined-adornment-amount"></InputLabel>
-                            <OutlinedInput id="outlined-adornment-amount" label="Amount" type="file" name='IdImage' onChange={(e)=>setIdImage(e.target.files[0])} sx={{ margin: "5px 0" }}/>
-                            </FormControl>
-                        <Typography  align="center" sx={{ margin: "5px 0" }}>Upload Your Image</Typography>
-                            <FormControl sx={{ margin: "5px 0" }}>
-                            <InputLabel htmlFor="outlined-adornment-amount"></InputLabel>
-                            <OutlinedInput id="outlined-adornment-amount" label="Amount" type="file" name='userImage' onChange={(e)=>setUserImage(e.target.files[0])} sx={{ margin: "5px 0" }}/>
-                            </FormControl> 
+                 
                         <Box align="center" sx={{ margin: "10px 0" }}>
                             <Button type="submit" variant="contained" color="primary" align="center">Submit</Button>
                         </Box>
